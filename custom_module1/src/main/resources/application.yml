@@ -1,0 +1,26 @@
+server:
+  port: 9999
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/customsys?serverTimezone=GMT
+    username: root
+    password: 123456
+
+  #????
+  redis:
+    port: 6379
+    host: localhost
+
+
+#????
+logging:
+  level:
+    com.xxgc: debug
+
+mybatis-plus:
+  global-config:
+    db-config:
+      logic-not-delete-value: 0
+      logic-delete-field: deleted
+      logic-delete-value: 1
